@@ -1,2 +1,2 @@
-var test = require('mocha').it,
- assert = require('chai').assert;
+var test = ('mocha').it,
+ assert = ('chai').expect;
