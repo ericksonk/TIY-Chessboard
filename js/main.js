@@ -1,5 +1,5 @@
-// var test = require('mocha').it,
-//  assert = require('chai').assert;
+(function(globals){ // IIFE: Immediately Invoked Function Expression
+}) (window || module && module.exports || this);
 
 (function(globals){
 // Don't worry if that seems a little funky...
@@ -28,7 +28,7 @@
   // var current; TODO: do we need this?
 
   // You don't need to understand `globals` yet...
-  var game = globals.game = {
+  var game = (globals.game = {
     /**
      * Provide a _copy_ of the game board in order to update the View from it
      *
@@ -88,10 +88,12 @@
     tracer: function(){
       var bullet = '';
 
+// console.log(rank, board[rank]); <<<<--- from class
+
       for ( var rank = 0; rank < board.length; rank++ ){
         bullet += '|';
         for ( var file = 0; file < board[rank].length; file++ ){
-          bullet += board[rank][file] || ' |';
+          bullet += (board[rank][file] || ' ') + '|';
         }
         bullet += '\n';
       }
@@ -108,10 +110,10 @@
      *
      * @todo Fill me in! ...and remove this comment.
      */
-    function applyMove(from, to){
+    applyMove: function applyMove(from, to){
       // You should write something in here...
     } // END applyMove
-  }; // END game
+  }); // END game
 
   /**
    * Provide the initial state of the game board, useful for any game.
