@@ -1,0 +1,26 @@
+{
+  "name": "tiy-chessboard",
+  "version": "0.0.0",
+  "description": "",
+  "main": "tests.js",
+  "dependencies": {
+    "chai": "^3.3.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  },
+  "scripts": {
+    "test": "mocha --bail",
+    "start": "browser-sync start --server --directory --files='test.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericksonk/TIY-Chessboard.git"
+  },
+  "author": "Kristine Erickson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ericksonk/TIY-Chessboard/issues"
+  },
+  "homepage": "https://github.com/ericksonk/TIY-Chessboard#readme"
+}
