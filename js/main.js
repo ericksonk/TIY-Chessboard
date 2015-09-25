@@ -1,7 +1,7 @@
 (function(globals){ // IIFE: Immediately Invoked Function Expression
-}) (window || module && module.exports || this);
+})(window || module && module.exports || this);
 
-(function(globals){
+(function(globals){ // IIFE: Immediately Invoked Function Expression
 // Don't worry if that seems a little funky...
 
   /**
@@ -22,7 +22,15 @@
    * @var {Array} of...?
    */
   var moves = [
-    // TODO: Fill me in!
+    [([6][3]), ([4][3])],
+    [([0][6]), ([2][5])],
+    [([6][2]), ([4][2])],
+    [([1][4]), ([2][4])],
+    [([6][6]), ([5][6])],
+    [([1][3]), ([3][3])],
+    [([7][5]), ([6][6])],
+    [([0][5]), ([1][4])],
+    [([7][6]), ([5][5])]
   ]; // END moves
 
   // var current; TODO: do we need this?
@@ -88,8 +96,6 @@
     tracer: function(){
       var bullet = '';
 
-// console.log(rank, board[rank]); <<<<--- from class
-
       for ( var rank = 0; rank < board.length; rank++ ){
         bullet += '|';
         for ( var file = 0; file < board[rank].length; file++ ){
@@ -110,7 +116,7 @@
      *
      * @todo Fill me in! ...and remove this comment.
      */
-    applyMove: function applyMove(from, to){
+    applyMove: function(from, to){
       // You should write something in here...
     } // END applyMove
   }); // END game
