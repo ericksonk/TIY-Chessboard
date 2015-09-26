@@ -24,16 +24,13 @@
   var moves = [
     [[6,3], [0,6], [6,2], [1,4], [6,6], [1,3], [7,5], [0,5], [7,6]],
     [[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]]
-    // [[6][3], [0][6], [6][2], [1][4], [6][6], [1][3], [7][5], [0][5], [7][6]],
-    // [[4][3], [2][5], [4][2], [2][4], [5][6], [3][3], [6][6], [1][4], [5][5]]
-  ]; // END moves
+    ]; // END moves
 
-var from = moves[0];
-var to = moves[1];
-console.log(from[[0]], to[[0]]);
+// var from = moves[0];
+// var to = moves[1];
+// console.log(from[[0]], to[[0]]);
 
-  // var current = moves[0];
-  // console.log(current);
+  // var current = [[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]];
 
   // You don't need to understand `globals` yet...
   var game = (globals.game = {
@@ -116,11 +113,24 @@ console.log(from[[0]], to[[0]]);
      *
      * @todo Fill me in! ...and remove this comment.
      */
-    applyMove: function(from, to){
-
+    applyMove: function(from, to) {
+      for (var i = 0; i < from.length; i++) {
+        from[i] = to[i];
+        return to[i];
+      }
     } // END applyMove
   }); // END game
-
+  console.log(game.applyMove.to[i]);
+  // return board.join('\n' + '|');
+// console.log(board.from[j]);
+// for (var i = 0; i < to.length; i++){
+//   board.to[i] = board.from;
+//     for (var j = 0; j < from.length; j++) {
+//       board.from[j] = ' ';
+//         return board.join('\n');
+//     }
+//     console.log(board.from[j]);
+// }
   /**
    * Provide the initial state of the game board, useful for any game.
    *
