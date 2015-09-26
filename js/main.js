@@ -26,8 +26,8 @@
     [[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]]
     ]; // END moves
 
-// var from = moves[0];
-// var to = moves[1];
+var from = moves[0];
+var to = moves[1];
 // console.log(from[[0]], to[[0]]);
 
   // var current = [[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]];
@@ -115,12 +115,14 @@
      */
     applyMove: function(from, to) {
       for (var i = 0; i < from.length; i++) {
-        from[i] = to[i];
-        return to[i];
+        for (var j = 0; j < to.length; j++) {
+          from[[i]] = to[[j]];
+        }
+        return to[[j]];
       }
     } // END applyMove
   }); // END game
-  console.log(game.applyMove.to[i]);
+  console.log(game.applyMove.to);
   // return board.join('\n' + '|');
 // console.log(board.from[j]);
 // for (var i = 0; i < to.length; i++){
