@@ -22,13 +22,15 @@
    * @var {Array} of...?
    */
   var moves = [
-    [[6][3], [0][6], [6][2], [1][4], [6][6], [1][3], [7][5], [0][5], [7][6]],
-    [[4][3], [2][5], [4][2], [2][4], [5][6], [3][3], [6][6], [1][4], [5][5]]
+    [[6,3], [0,6], [6,2], [1,4], [6,6], [1,3], [7,5], [0,5], [7,6]],
+    [[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]]
+    // [[6][3], [0][6], [6][2], [1][4], [6][6], [1][3], [7][5], [0][5], [7][6]],
+    // [[4][3], [2][5], [4][2], [2][4], [5][6], [3][3], [6][6], [1][4], [5][5]]
   ]; // END moves
-  console.log(moves.board);
 
-// var moves[1] = from;
-// var moves[2] = to;
+var from = moves[0];
+var to = moves[1];
+console.log(from[[0]], to[[0]]);
 
   // var current = moves[0];
   // console.log(current);
@@ -115,7 +117,7 @@
      * @todo Fill me in! ...and remove this comment.
      */
     applyMove: function(from, to){
-      // You should write something in here...
+
     } // END applyMove
   }); // END game
 
