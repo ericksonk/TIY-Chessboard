@@ -7,10 +7,10 @@
    * 3. What `CALLBACK` should be run when the interaction happens?
    * 4. What should my `CALLBACK` do with it's `EVENT`...?
    */
-  document.querySelector(SELECTOR)
-    .addEventListener(TYPE, CALLBACK);
-  // AKA
-  jQuery(SELECTOR).on(TYPE, CALLBACK);
+  // document.querySelector(SELECTOR)
+  //   .addEventListener(TYPE, CALLBACK);
+  // // AKA
+  // jQuery(SELECTOR).on(TYPE, CALLBACK);
   // Where CALLBACK is...
   function CALLBACK (EVENT){
     // Do something with Models and Views...
@@ -19,32 +19,32 @@
 
 
   // Controller for "next move"...
-  jQuery(/* your "next move" button */).on('click', function(event){
-    // TODO: Fire tracer bullet!
+  jQuery('.fa-step-forward').on('click', function(event){
+    alert('next move');
     // TODO: Tell the Model -- `game` -- to advance to the next move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for "previous move"...
-  jQuery(/* your "previous move" button */).on('click', function(event){
-    // TODO: Fire tracer bullet!
+  jQuery('.fa-step-backward').on('click', function(event){
+    alert('previous move');
     // TODO: Tell the Model -- `game` -- to advance to the previous move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for "fast-forward"...
-  jQuery(/* your "fast-forward" button */).on(/* wat? */, function(event){
-    // TODO: Fire tracer bullet!
+  jQuery('.fa-fast-forward').on('click', function(event){
+    alert('fast forward');
     // TODO: Tell the Model -- `game` -- to advance to the last move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for anything else...
-  jQuery(/* any other buttons out there? */).on(/* dunno */, function(event){
-    // TODO: Fire tracer bullet!
+  jQuery('.fa-backward').on('click', function(event){
+    alert('back to the beginning');
     // TODO: Tell the Model -- `game` -- to do something it knows how to do...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
 // Am I supposed to recognize this?
-})(window || module && module.exports || this)
+})(window || module && module.exports || this);
