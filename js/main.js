@@ -28,7 +28,7 @@
 
 var from = moves[0];
 var to = moves[1];
-// console.log(from[[0]], to[[0]]);
+console.log(from[[0]], to[[0]]);
 
   // var current = [[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]];
 
