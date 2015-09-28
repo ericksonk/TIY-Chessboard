@@ -114,12 +114,13 @@ console.log(from[[0]], to[[0]]);
      * @todo Fill me in! ...and remove this comment.
      */
     applyMove: function(from, to) {
-      for (var i = 0; i < from.length; i++) {
-        for (var j = 0; j < to.length; j++) {
-          from[[i]] = to[[j]];
-        }
-        return to[[j]];
-      }
+      
+      // for (var i = 0; i < from.length; i++) {
+      //   for (var j = 0; j < to.length; j++) {
+      //     from[[i]] = to[[j]];
+      //   }
+      //   return to[[j]];
+      // }
     } // END applyMove
   }); // END game
   console.log(game.applyMove.to);
