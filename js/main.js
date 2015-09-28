@@ -1,7 +1,7 @@
-// var test = require('mocha').it,
-//  assert = require('chai').assert;
+(function(globals){ // IIFE: Immediately Invoked Function Expression
+})(window || module && module.exports || this);
 
-(function(globals){
+(function(globals){ // IIFE: Immediately Invoked Function Expression
 // Don't worry if that seems a little funky...
 
   /**
@@ -22,13 +22,18 @@
    * @var {Array} of...?
    */
   var moves = [
-    // TODO: Fill me in!
-  ]; // END moves
+    [[6,3], [0,6], [6,2], [1,4], [6,6], [1,3], [7,5], [0,5], [7,6]],
+    [[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]]
+    ]; // END moves
 
-  // var current; TODO: do we need this?
+var from = moves[0];
+var to = moves[1];
+console.log(from[[0]], to[[0]]);
+
+  // var current = [[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]];
 
   // You don't need to understand `globals` yet...
-  var game = globals.game = {
+  var game = (globals.game = {
     /**
      * Provide a _copy_ of the game board in order to update the View from it
      *
@@ -91,7 +96,7 @@
       for ( var rank = 0; rank < board.length; rank++ ){
         bullet += '|';
         for ( var file = 0; file < board[rank].length; file++ ){
-          bullet += board[rank][file] || ' |';
+          bullet += (board[rank][file] || ' ') + '|';
         }
         bullet += '\n';
       }
@@ -108,11 +113,27 @@
      *
      * @todo Fill me in! ...and remove this comment.
      */
-    function applyMove(from, to){
-      // You should write something in here...
+    applyMove: function(from, to) {
+      
+      // for (var i = 0; i < from.length; i++) {
+      //   for (var j = 0; j < to.length; j++) {
+      //     from[[i]] = to[[j]];
+      //   }
+      //   return to[[j]];
+      // }
     } // END applyMove
-  }; // END game
-
+  }); // END game
+  console.log(game.applyMove.to);
+  // return board.join('\n' + '|');
+// console.log(board.from[j]);
+// for (var i = 0; i < to.length; i++){
+//   board.to[i] = board.from;
+//     for (var j = 0; j < from.length; j++) {
+//       board.from[j] = ' ';
+//         return board.join('\n');
+//     }
+//     console.log(board.from[j]);
+// }
   /**
    * Provide the initial state of the game board, useful for any game.
    *
@@ -133,3 +154,14 @@
 
 // You are not expected to understand anything below this line...
 })(window || module && module.exports || this);
+
+
+// ([6][3], [4][3]),
+// ([0][6], [2][5]),
+// ([6][2], [4][2]),
+// ([1][4], [2][4]),
+// ([6][6], [5][6]),
+// ([1][3], [3][3]),
+// ([7][5], [6][6]),
+// ([0][5], [1][4]),
+// ([7][6], [5][5])

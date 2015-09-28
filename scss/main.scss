@@ -94,14 +94,80 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.board {
+  margin-left: auto;
+  margin-right: auto;
+}
+.row-8, .row-7, .row-6, .row-5, .row-4, .row-3, .row-2, .row-1, {
+  height: 75px;
+  text-align: center;
+}
 
+.light, .dark {
+  width: 75px;
+}
 
+.light {
+  background: #fff;
+}
 
+.dark {
+  background: #818A8E;
+}
 
+.bRook::before { //black rook
+  content: "\265c";
+  font-size: 40pt;
+}
+.bKnight::before { //black knight
+  content: "\265e";
+  font-size: 40pt;
+}
+.bBishop::before { //black bishop
+  content: "\265d";
+  font-size: 40pt;
+}
+.bQueen::before { // black queen
+  content: "\265b";
+  font-size: 40pt;
+}
+.bKing::before { // black king
+  content: "\265a";
+  font-size: 40pt;
+}
+.bPawn::before { // black pawn
+  content: "\265f";
+  font-size: 40pt;
+}
+.wRook::before { // white rook
+  content: "\2656";
+  font-size: 40pt;
+}
+.wKnight::before { // white knight
+  content: "\2658";
+  font-size: 40pt;
+}
+.wBishop::before { // white bishop
+  content: "\2657";
+  font-size: 40pt;
+}
+.wQueen::before { // white queen
+  content: "\2655";
+  font-size: 40pt;
+}
+.wKing::before { // white king
+  content: "\2654";
+  font-size: 40pt;
+}
+.wPawn::before { // white pawn
+  content: "\2659";
+  font-size: 40pt;
+}
 
-
-
-
+.buttons {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 

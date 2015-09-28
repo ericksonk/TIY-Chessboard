@@ -1,14 +1,12 @@
-console.log("tracer bullet");
+var test = ('mocha').it,
+ expect = ('chai').expect;
 
-// var test = ('mocha').it,
-//  expect = ('chai').expect;
-//
-//
-//
+console.log(game.tracer());
+
 //  // What kind of thing is game.board...? What does it do?
-//  test('initializing chess game' function(){
-//     // expect(board).to.exist;
-//  });
+ // test('initializing chess game' function() {
+ //    expect(game.board).to.be.an.Array;
+ // }
 //
 //  // How about game.reset? What does it return? Any side-effects?
 //

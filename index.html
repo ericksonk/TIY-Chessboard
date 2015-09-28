@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     </head>
     <body>
-        <table>
+        <table class="board">
           <tr>
             <td width="20px" height="20px" align="center" bgcolor="cornflowerblue"></td>
             <td width="75px" height="20px" align="center" bgcolor="cornflowerblue">a</td>
@@ -29,100 +29,100 @@
             <td width="75px" height="20px" align="center" bgcolor="cornflowerblue">h</td>
             <td width="20px" height="20px" align="center" bgcolor="cornflowerblue"></td>
           </tr>
-          <tr>
+          <tr class="row-8">
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">8</td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
+            <td id="a8" class="light bRook"></td>
+            <td id="b8" class="dark bKnight"></td>
+            <td id="c8" class="light bBishop"></td>
+            <td id="d8" class="dark bQueen"></td>
+            <td id="e8" class="light bKing"></td>
+            <td id="f8" class="dark bBishop"></td>
+            <td id="g8" class="light bKnight"></td>
+            <td id="h8" class="dark bRook"></td>
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">8</td>
           </tr>
-          <tr>
+          <tr class="row-7">
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">7</td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
+            <td id="a7" class="dark bPawn"></td>
+            <td id="b7" class="light bPawn"></td>
+            <td id="c7" class="dark bPawn"></td>
+            <td id="d7" class="light bPawn"></td>
+            <td id="e7" class="dark bPawn"></td>
+            <td id="f7" class="light bPawn"></td>
+            <td id="g7" class="dark bPawn"></td>
+            <td id="h7" class="light bPawn"></td>
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">7</td>
           </tr>
-          <tr>
+          <tr class="row-6">
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">6</td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
+            <td id="a6" class="light"></td>
+            <td id="b6" class="dark"></td>
+            <td id="c6" class="light"></td>
+            <td id="d6" class="dark"></td>
+            <td id="e6" class="light"></td>
+            <td id="f6" class="dark"></td>
+            <td id="g6" class="light"></td>
+            <td id="h6" class="dark"></td>
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">6</td>
           </tr>
-          <tr>
+          <tr class="row-5">
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">5</td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
+            <td id="a5" class="dark"></td>
+            <td id="b5" class="light"></td>
+            <td id="c5" class="dark"></td>
+            <td id="d5" class="light"></td>
+            <td id="e5" class="dark"></td>
+            <td id="f5" class="light"></td>
+            <td id="g5" class="dark"></td>
+            <td id="h6" class="light"></td>
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">5</td>
           </tr>
-          <tr>
+          <tr class="row-4">
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">4</td>
-            <td width="75px" height="75px" bgcolor="white" ></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
+            <td id="a4" class="light"></td>
+            <td id="b4" class="dark"></td>
+            <td id="c4" class="light"></td>
+            <td id="d4" class="dark"></td>
+            <td id="e4" class="light"></td>
+            <td id="f4" class="dark"></td>
+            <td id="g4" class="light"></td>
+            <td id="h4" class="dark"></td>
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">4</td>
           </tr>
-          <tr>
+          <tr class="row-3">
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">3</td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
+            <td id="a3" class="dark"></td>
+            <td id="b3" class="light"></td>
+            <td id="c3" class="dark"></td>
+            <td id="d3" class="light"></td>
+            <td id="e3" class="dark"></td>
+            <td id="f3" class="light"></td>
+            <td id="g3" class="dark"></td>
+            <td id="h3" class="light"></td>
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">3</td>
           </tr>
-          <tr>
+          <tr class="row-2">
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">2</td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
+            <td id="a2" class="light wPawn"></td>
+            <td id="b2" class="dark wPawn"></td>
+            <td id="c2" class="light wPawn"></td>
+            <td id="d2" class="dark wPawn"></td>
+            <td id="e2" class="light wPawn"></td>
+            <td id="f2" class="dark wPawn"></td>
+            <td id="g2" class="light wPawn"></td>
+            <td id="h2" class="dark wPawn"></td>
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">2</td>
           </tr>
-          <tr>
+          <tr class="row-1">
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">1</td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
-            <td width="75px" height="75px" bgcolor="black"></td>
-            <td width="75px" height="75px" bgcolor="white"></td>
+            <td id="a1" class="dark wRook"></td>
+            <td id="b1" class="light wKnight"></td>
+            <td id="c1" class="dark wBishop"></td>
+            <td id="d1" class="light wQueen"></td>
+            <td id="e1" class="dark wKing"></td>
+            <td id="f1" class="light wBishop"></td>
+            <td id="g1" class="dark wKnight"></td>
+            <td id="h1" class="light wRook"></td>
             <td width="20px" height="75px" align="center" bgcolor="cornflowerblue">1</td>
           </tr>
           <tr>
@@ -137,24 +137,20 @@
             <td width="75px" height="20px" align="center" bgcolor="cornflowerblue">h</td>
             <td width="20px" height="20px" align="center" bgcolor="cornflowerblue"></td>
           </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td align="center"><i class="fa fa-backward"></i></td>
-            <td align="center"><i class="fa fa-step-backward"></i></td>
-            <td align="center"><i class="fa fa-play"></i></td>
-            <td align="center"><i class="fa fa-step-forward"></i></td>
-            <td align="center"><i class="fa fa-fast-forward"></i></td>
-            <td></td>
-            <td></td>
-          </tr>
+          <section class="buttons">
+            <button><i class="fa fa-backward"></i></button>
+            <button><i class="fa fa-step-backward"></i></button>
+            <button><i class="fa fa-play"></i></button>
+            <button><i class="fa fa-step-forward"></i></button>
+            <button><i class="fa fa-fast-forward"></i></button>
+          </section>
         </table>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/controllers.js"></script>
         <script scr="js/test.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
