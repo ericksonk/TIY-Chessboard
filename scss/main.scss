@@ -94,14 +94,36 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.board {
+  margin-left: auto;
+  margin-right: auto;
+}
+.row-8, .row-7, .row-6, .row-5, .row-4, .row-3, .row-2, .row-1, {
+  height: 75px;
+  text-align: center;
+}
 
+.light, .dark {
+  width: 75px;
+}
 
+.light {
+  background: #fff;
+}
 
+.dark {
+  background: #818A8E;
+}
 
+#a8::before {
+  content: "\265c";
+  font-size: 40pt;
+}
 
-
-
-
+.buttons {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
