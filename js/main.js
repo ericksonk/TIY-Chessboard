@@ -125,7 +125,6 @@
       moves[0].from = null;
       console.log(moves.join('\n'));
 
-
       // for (var i = 0; i < from.length; i++) {
       //   for (var j = 0; j < to.length; j++) {
       //     from[[i]] = to[[j]];
