@@ -22,13 +22,20 @@
    * @var {Array} of...?
    */
   var moves = [
-    [[6,3], [0,6], [6,2], [1,4], [6,6], [1,3], [7,5], [0,5], [7,6]],
-    [[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]]
+    { from: { rank: 6, file: 3},
+      to: { rank: 4, file: 3}
+    },
+    { from: { rank: 0, file: 6},
+      to: { rank: 2, file: 5}
+    }
     ]; // END moves
+    // console.log(moves);
 
-var from = moves[0];
-var to = moves[1];
-console.log(from[[0]], to[[0]]);
+// [[6,3], [0,6], [6,2], [1,4], [6,6], [1,3], [7,5], [0,5], [7,6]],
+// [[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]]
+// var from = moves[0];
+// var to = moves[1];
+// console.log(from[[0]], to[[0]]);
 
   // var current = [[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]];
 
@@ -114,7 +121,10 @@ console.log(from[[0]], to[[0]]);
      * @todo Fill me in! ...and remove this comment.
      */
     applyMove: function(from, to) {
-      
+      moves[0].to = moves[0].from; // place we are moving `to` is assigned piece we are moving `from`
+      moves[0].from = null;
+      console.log(moves.join('\n'));
+
       // for (var i = 0; i < from.length; i++) {
       //   for (var j = 0; j < to.length; j++) {
       //     from[[i]] = to[[j]];
@@ -123,7 +133,7 @@ console.log(from[[0]], to[[0]]);
       // }
     } // END applyMove
   }); // END game
-  console.log(game.applyMove.to);
+  // console.log(game.applyMove.to);
   // return board.join('\n' + '|');
 // console.log(board.from[j]);
 // for (var i = 0; i < to.length; i++){

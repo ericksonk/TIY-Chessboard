@@ -10,7 +10,7 @@
     "mocha": "^2.3.3"
   },
   "scripts": {
-    "test": "mocha --bail",
+    "test": "browser-sync start --server --startPath tests.html --files='js/*.js'",
     "start": "browser-sync start --server --directory --files='test.html'"
   },
   "repository": {
