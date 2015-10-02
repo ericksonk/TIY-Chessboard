@@ -97,83 +97,156 @@ textarea {
 // body {
 //   width: auto;
 // }
+// body {
+//   width: auto;
 
-main.container {
-  margin: 0 10%;
-}
-table.chessboard {
-  width: 100%;
-}
-.row-8, .row-7, .row-6, .row-5, .row-4, .row-3, .row-2, .row-1, {
-  height: 75px;
+  main.container {
+    margin: 0 10%;
+
+    .chessboard {
+      width: 100%;
+    }
+
+      td {
+        width: 10%;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 10%; // makes it square!
+        padding-left: 0;
+
+
+          // .bRook::before { //black rook
+          //   content: "\265c";
+          // }
+          // .bKnight::before { //black knight
+          //   content: "\265e";
+          // }
+          // .bBishop::before { //black bishop
+          //   content: "\265d";
+          // }
+          // .bQueen::before { // black queen
+          //   content: "\265b";
+          // }
+          // .bKing::before { // black king
+          //   content: "\265a";
+          // }
+          // .bPawn::before { // black pawn
+          //   content: "\265f";
+          // }
+          // .wRook::before { // white rook
+          //   content: "\2656";
+          // }
+          // .wKnight::before { // white knight
+          //   content: "\2658";
+          // }
+          // .wBishop::before { // white bishop
+          //   content: "\2657";
+          // }
+          // .wQueen::before { // white queen
+          //   content: "\2655";
+          // }
+          // .wKing::before { // white king
+          //   content: "\2654";
+          // }
+          // .wPawn::before { // white pawn
+          //   content: "\2659";
+          // }
+      }
+
+      .light {
+        background: #fff;
+      }
+
+      .dark {
+        background: #818A8E;
+      }
+
+  }
+
+  tbody tr:nth-child(even) td:nth-child(even) {
+    background-color: #818A8E;
+  }
+  tbody tr:nth-child(odd) td:nth-child(odd) {
+    background-color: #818A8E;
+  }
+
+  .bRook::before { //black rook
+    content: "\265c";
+  }
+  .bKnight::before { //black knight
+    content: "\265e";
+  }
+  .bBishop::before { //black bishop
+    content: "\265d";
+  }
+  .bQueen::before { // black queen
+    content: "\265b";
+  }
+  .bKing::before { // black king
+    content: "\265a";
+  }
+  .bPawn::before { // black pawn
+    content: "\265f";
+  }
+  .wRook::before { // white rook
+    content: "\2656";
+  }
+  .wKnight::before { // white knight
+    content: "\2658";
+  }
+  .wBishop::before { // white bishop
+    content: "\2657";
+  }
+  .wQueen::before { // white queen
+    content: "\2655";
+  }
+  .wKing::before { // white king
+    content: "\2654";
+  }
+  .wPawn::before { // white pawn
+    content: "\2659";
+  }
+// }
+// td::before{
+//   position: absolute;
+//   font-size: 20pt;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   text-align: center;
+// }
+
+td::before{
+  position: absolute;
+  font-size: 40pt;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   text-align: center;
 }
+// .row-8, .row-7, .row-6, .row-5, .row-4, .row-3, .row-2, .row-1, {
+//   height: 75px;
+//   text-align: center;
+// }
 
-.light, .dark {
-  width: 75px;
-}
+// .light, .dark {
+//   width: 75px;
+// }
 
-.light {
-  background: #fff;
-}
+// .light {
+//   background: #fff;
+// }
+//
+// .dark {
+//   background: #818A8E;
+// }
 
-.dark {
-  background: #818A8E;
-}
-
-.bRook::before { //black rook
-  content: "\265c";
-  font-size: 40pt;
-}
-.bKnight::before { //black knight
-  content: "\265e";
-  font-size: 40pt;
-}
-.bBishop::before { //black bishop
-  content: "\265d";
-  font-size: 40pt;
-}
-.bQueen::before { // black queen
-  content: "\265b";
-  font-size: 40pt;
-}
-.bKing::before { // black king
-  content: "\265a";
-  font-size: 40pt;
-}
-.bPawn::before { // black pawn
-  content: "\265f";
-  font-size: 40pt;
-}
-.wRook::before { // white rook
-  content: "\2656";
-  font-size: 40pt;
-}
-.wKnight::before { // white knight
-  content: "\2658";
-  font-size: 40pt;
-}
-.wBishop::before { // white bishop
-  content: "\2657";
-  font-size: 40pt;
-}
-.wQueen::before { // white queen
-  content: "\2655";
-  font-size: 40pt;
-}
-.wKing::before { // white king
-  content: "\2654";
-  font-size: 40pt;
-}
-.wPawn::before { // white pawn
-  content: "\2659";
-  font-size: 40pt;
-}
-
-.buttons {
-  margin-left: auto;
-  margin-right: auto;
-}
+// .buttons {
+//   margin-left: auto;
+//   margin-right: auto;
+// }
 
 
 
