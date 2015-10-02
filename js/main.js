@@ -60,6 +60,8 @@
 
     ]; // END moves
 
+    var current = 0;
+
     // console.log(moves);
 // [[6,3], [0,6], [6,2], [1,4], [6,6], [1,3], [7,5], [0,5], [7,6]],
 // [[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]]
@@ -98,7 +100,8 @@
      * @todo Make this work!
      */
     next: function(){
-      // Doesn't this seem to be missing something?
+      var from = moves[0];
+      var to = moves[0];
       return this;
     },
     /**
@@ -158,28 +161,10 @@
       // moves[0].from = null;
       // console.log(moves.join('\n'));
 
-      // for (var i = 0; i < from.length; i++) {
-      //   for (var j = 0; j < to.length; j++) {
-      //     from[[i]] = to[[j]];
-      //   }
-      //   return to[[j]];
-      // }
     } // END applyMove
   }); // END game
   console.log(game.tracer());
 
-
-  // console.log(game.applyMove.to);
-  // return board.join('\n' + '|');
-// console.log(board.from[j]);
-// for (var i = 0; i < to.length; i++){
-//   board.to[i] = board.from;
-//     for (var j = 0; j < from.length; j++) {
-//       board.from[j] = ' ';
-//         return board.join('\n');
-//     }
-//     console.log(board.from[j]);
-// }
   /**
    * Provide the initial state of the game board, useful for any game.
    *
