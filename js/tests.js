@@ -26,21 +26,80 @@
 
    }); // END it should be a big Array
 
-   it('should be able to move pieces', function(){
+it.skip('should tell me what piece is at the position', function(){
+  // expect(gam.pieceAt)
+});
+
+   it('should be able to move a piece', function(){
      // board[0][0] = board[0][1];
-     game.applyMove(
+     // Initialize the Enviornment...
+     game.reset(); //Re-initialize the board;
+     var board = game.board();
+
+    // Test the Preconditions...
+     expect(board[6][3]).to.equal('p');
+     expect(board[4][3]).to.be(null);
+
+    // Action to change the world...
+     expect(game.applyMove(
        // TODO: one day take { file: 'd', rank: 2 },
        { rank: 6, file: 3 }, // from
        // TODO: one day take { file: 'd', rank: 4 }
        { rank: 4, file: 3 } // to
-     );
+     )).to.equal(undefined);
 
-     var board = game.board();
+     var board = game.board(); // re-copy the board? (dont need to do again)
 
-     chai.expect(board[6][4]).to.be.equal(null);
+     // Test the Postconditions
+     chai.expect(board[6][3]).to.be.equal(null);
      chai.expect(board[4][3]).to.be.equal('p');
 
-   });
+    //  expect(game.tracer()).to.equal([
+    //     '|R|N|B|Q|K|B|N|R|',
+    //     '|P|P|P|P|P|P|P|P|',
+    //     '| | | | | | | | |',
+    //     '| | | | | | | | |',
+    //     '| | | | | | | | |',
+    //     '| | | | | | | | |',
+    //     '|p|p|p|p|p|p|p|p|',
+    //     '|r|n|b|q|k|b|n|r|',
+    //  ].join('\n') + '\n');
+   });  // it should move a piece
+
+it('should be able to move a different piece', function(){
+  //create the world anew (aka initialize enviornment)
+   game.reset();
+   var board = game.board();
+
+// function toTracer(rows){
+//   return rows.join('\n') + '\n';
+// }
+
+   // Test the Precondition
+   chai.expect(game.tracer()).to.equal([
+     '|R|N|B|Q|K|B|N|R|',
+     '|P|P|P|P|P|P|P|P|',
+     '| | | | | | | | |',
+     '| | | | | | | | |',
+     '| | | | | | | | |',
+     '| | | | | | | | |',
+     '|p|p|p|p|p|p|p|p|',
+     '|r|n|b|q|k|b|n|r|',
+   ].join('\n') + '\n');
+// notes to self for later...
+  // var secondMove = moves[1] = {
+  //   from: {rank 0, file: 6},
+  //   to: { rank: 2, file: 5}
+  // }
+   // Action: `applyMove` for (black night to f6) to change the world...
+   expect(game.applyMove(
+     {rank: 0, file: 6},
+     {rank: 2, file: 5}
+   )).to.be.undefined;
+   // Test the Postconditions
+});
+
+
 
    it.skip('should be able to advance to the next move', function(){
     //  chai.expect(board[0][0]).to.be.a('string');

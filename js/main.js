@@ -29,8 +29,8 @@
       to: { rank: 2, file: 5}
     }
     ]; // END moves
-    // console.log(moves);
 
+    // console.log(moves);
 // [[6,3], [0,6], [6,2], [1,4], [6,6], [1,3], [7,5], [0,5], [7,6]],
 // [[4,3], [2,5], [4,2], [2,4], [5,6], [3,3], [6,6], [1,4], [5,5]]
 // var from = moves[0];
@@ -59,7 +59,7 @@
     reset: function(){
       board = initial();
 
-      return this;
+      return this; // `this` referes to the object `reset` belongs to... AKA `game`
     },
     /**
      * Advance the internal game board to the next move.
@@ -121,9 +121,12 @@
      * @todo Fill me in! ...and remove this comment.
      */
     applyMove: function(from, to) {
-      moves[0].to = moves[0].from; // place we are moving `to` is assigned piece we are moving `from`
-      moves[0].from = null;
-      console.log(moves.join('\n'));
+      // TODO: Apply the move `from` and `to` to the `board`
+      board[4][3] = board[6][3];
+      board[6][3] = null;
+      // moves[0].to = moves[0].from; // place we are moving `to` is assigned piece we are moving `from`
+      // moves[0].from = null;
+      // console.log(moves.join('\n'));
 
       // for (var i = 0; i < from.length; i++) {
       //   for (var j = 0; j < to.length; j++) {
@@ -133,6 +136,9 @@
       // }
     } // END applyMove
   }); // END game
+  console.log(game.tracer());
+
+
   // console.log(game.applyMove.to);
   // return board.join('\n' + '|');
 // console.log(board.from[j]);
