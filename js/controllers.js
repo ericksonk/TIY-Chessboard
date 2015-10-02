@@ -17,31 +17,49 @@
     // Maybe do something with EVENT...?
   }
 
+var $chessboard = jQuery('.chessboard tbody');
+
+var gameboard = game.board();
 
   // Controller for "next move"...
   jQuery('.fa-step-forward').on('click', function(event){
-    alert('next move');
-    game.reset(); // TODO: Tell the Model -- `game` -- to advance to the next move...
+    console.log('next move');
+    game.next(); // Tell the Model -- `game` -- to advance to the next move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+
+    jQuery(gameboard).each(function(rank, row){
+      jQuery(row).each(function(file, piece){
+        var $square = $chessboard
+          .find('tr').eq(rank)
+          .find('td').eq(file);
+
+          console.log($square.get(), rank, file, piece);
+
+          if (piece) $square.text(piece);
+          // TODO: Convert `square` to class name(s)
+        // TODO: Add class name(s) to `td` instead
+      });
+    });
+
   });
 
   // Controller for "previous move"...
   jQuery('.fa-step-backward').on('click', function(event){
-    alert('previous move');
+    console.log('previous move');
     // TODO: Tell the Model -- `game` -- to advance to the previous move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for "fast-forward"...
   jQuery('.fa-fast-forward').on('click', function(event){
-    alert('fast forward');
+    console.log('fast forward');
     // TODO: Tell the Model -- `game` -- to advance to the last move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
 
   // Controller for anything else...
   jQuery('.fa-backward').on('click', function(event){
-    alert('back to the beginning');
+    console.log('back to the beginning');
     // TODO: Tell the Model -- `game` -- to do something it knows how to do...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
