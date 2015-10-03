@@ -61,7 +61,7 @@
 
     ]; // END moves
 
-    var current = 0;
+    var current = 0; // current position
 
   // You don't need to understand `globals` yet...
   var game = (globals.game = {
@@ -95,8 +95,8 @@
       var xfrom = moves[current].from; // calling position x from moves.from
       var xto = moves[current].to; // calling position x from moves.to
 
-      if (current < moves.length) { // if current is less than the length of moves...
-        current += 1; // ... increase current by one
+      if (current <= moves.length) { // if current is less than the length of moves...
+        current += 1; // ... increase current position by one
 
         game.applyMove(xfrom, xto);
       }
@@ -112,8 +112,8 @@
       var xfrom = moves[current].from;
       var xto = moves[current].to;
 
-      if (current >= 0) {
-        current -= 1;
+      if (current >= 0) { // if the current position is greater than or equal to 0...
+        current -= 1; // ... decrease current position by 1
 
         game.applyMove(xto, xfrom);
       }
