@@ -17,9 +17,9 @@
     // Maybe do something with EVENT...?
   }
 
-var $chessboard = jQuery('.chessboard tbody');
-
-var gameboard = game.board();
+// var $chessboard = jQuery('.chessboard tbody');
+//
+// var gameboard = game.board();
 
   // Controller for "next move"...
   jQuery('.fa-step-forward').on('click', function(event){
@@ -27,19 +27,19 @@ var gameboard = game.board();
     game.next(); // Tell the Model -- `game` -- to advance to the next move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
 
-    jQuery(gameboard).each(function(rank, row){
-      jQuery(row).each(function(file, piece){
-        var $square = $chessboard
-          .find('tr').eq(rank)
-          .find('td').eq(file);
-
-          console.log($square.get(), rank, file, piece);
-
-          if (piece) $square.text(piece); // if (piece) $square.text(piece);
-             $square.get('R').addClass('bRook');// TODO: Convert `square` to class name(s)
-             // TODO: Add class name(s) to `td` instead
-      });
-    });
+    // jQuery(gameboard).each(function(rank, row){
+    //   jQuery(row).each(function(file, piece){
+    //     var $square = $chessboard
+    //       .find('tr').eq(rank)
+    //       .find('td').eq(file);
+    //
+    //       console.log($square.get(), rank, file, piece);
+    //
+    //       if (piece) $square.text(piece); // if (piece) $square.text(piece);
+    //          $square.get('R').addClass('bRook');// TODO: Convert `square` to class name(s)
+    //          // TODO: Add class name(s) to `td` instead
+    //   });
+    // });
 
   });
 
