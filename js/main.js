@@ -109,7 +109,14 @@
      * @todo Make this work!
      */
     prev: function(){
-      // Another good place for code...
+      var xfrom = moves[current].from;
+      var xto = moves[current].to;
+
+      if (current >= 0) {
+        current -= 1;
+
+        game.applyMove(xto, xfrom);
+      }
       return this;
     },
     /**
@@ -156,6 +163,10 @@
       board[to.rank][to.file] = board[from.rank][from.file]; // ex. first move is board[4][3] = board[6][3];
       board[from.rank][from.file] = null; // ex. first move board[6][3] = null;
       console.log(game.tracer(game.applyMove));
+
+      // board[from.rank][from.file] = board[to.rank][to.file];
+      // board[to.rank][to.file] = null;
+      // console.log(game.tracer(game.applyMove));
 
 
 

@@ -35,9 +35,9 @@ var gameboard = game.board();
 
           console.log($square.get(), rank, file, piece);
 
-          if (piece) $square.text(piece);
-          // TODO: Convert `square` to class name(s)
-        // TODO: Add class name(s) to `td` instead
+          if (piece) $square.text(piece); // if (piece) $square.text(piece);
+             $square.get('R').addClass('bRook');// TODO: Convert `square` to class name(s)
+             // TODO: Add class name(s) to `td` instead
       });
     });
 
@@ -46,6 +46,7 @@ var gameboard = game.board();
   // Controller for "previous move"...
   jQuery('.fa-step-backward').on('click', function(event){
     console.log('previous move');
+    game.prev();
     // TODO: Tell the Model -- `game` -- to advance to the previous move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
