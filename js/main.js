@@ -82,7 +82,7 @@
      */
     reset: function(){
       board = initial();
-
+      console.log(game.tracer(game.reset));
       return this; // `this` referes to the object `reset` belongs to... AKA `game`
     },
     /**
@@ -126,7 +126,13 @@
      * @todo Make this work!
      */
     end: function(){
-      // Write some code here...
+      // var endBoard = initial(moves[current]);
+      for (current = 0; current < moves.length; current++){
+        var xfrom = moves[current].from;
+        var xto = moves[current].to;
+        game.applyMove(xfrom, xto);
+      }
+      console.log(game.tracer(game.end));
       return this;
     },
     /**
