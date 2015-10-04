@@ -92,10 +92,10 @@
      * @todo Make this work!
      */
     next: function(){
-      var xfrom = moves[current].from; // calling position x from moves.from
-      var xto = moves[current].to; // calling position x from moves.to
 
       if (current <= moves.length) { // if current is less than the length of moves...
+        var xfrom = moves[current].from; // calling position x from moves.from
+        var xto = moves[current].to; // calling position x from moves.to
         current += 1; // ... increase current position by one
 
         game.applyMove(xfrom, xto);
@@ -109,10 +109,10 @@
      * @todo Make this work!
      */
     prev: function(){
-      var xfrom = moves[current].from;
-      var xto = moves[current].to;
 
       if (current >= 0) { // if the current position is greater than or equal to 0...
+        var xfrom = moves[current].from;
+        var xto = moves[current].to;
         current -= 1; // ... decrease current position by 1
 
         game.applyMove(xto, xfrom);

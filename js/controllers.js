@@ -17,30 +17,21 @@
     // Maybe do something with EVENT...?
   }
 
-// var $chessboard = jQuery('.chessboard tbody');
-//
-// var gameboard = game.board();
+var $chessboard = jQuery('.chessboard tbody');
+
+var gameboard = game.board();
 
   // Controller for "next move"...
   jQuery('.fa-step-forward').on('click', function(event){
     console.log('next move');
     game.next(); // Tell the Model -- `game` -- to advance to the next move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
-
-    // jQuery(gameboard).each(function(rank, row){
-    //   jQuery(row).each(function(file, piece){
-    //     var $square = $chessboard
-    //       .find('tr').eq(rank)
-    //       .find('td').eq(file);
-    //
-    //       console.log($square.get(), rank, file, piece);
-    //
-    //       if (piece) $square.text(piece); // if (piece) $square.text(piece);
-    //          $square.get('R').addClass('bRook');// TODO: Convert `square` to class name(s)
-    //          // TODO: Add class name(s) to `td` instead
-    //   });
-    // });
-
+    jQuery(gameboard).each(function(rank, row){
+      jQuery(row).each(function(file, piece){
+        if (piece === 'p') {
+          $.find('tr').eq(6).find('td').eq(3).removeClass('wPawn');
+          $.find('tr').eq(4).find('td').eq(3).addClass('wPawn');
+        }
   });
 
   // Controller for "previous move"...
@@ -63,6 +54,7 @@
     game.reset(); // TODO: Tell the Model -- `game` -- to do something it knows how to do...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
   });
+});
 
 // Am I supposed to recognize this?
 })(window || module && module.exports || this);
