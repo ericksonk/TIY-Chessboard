@@ -146,7 +146,55 @@ var gameboard = game.board();
     console.log('back to the beginning');
     game.reset(); // TODO: Tell the Model -- `game` -- to do something it knows how to do...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
-  });
+    jQuery(gameboard).each(function(rank, row){
+      jQuery(row).each(function(file, piece){
 
+        if (piece === 'p') {
+          $('tr.row-4 td:eq(3)').removeClass('wPawn');
+          $('tr.row-2 td:eq(3)').addClass('wPawn');
+        }
+
+        if (piece === 'N') {
+          $('tr.row-8 td:eq(6)').addClass('bKnight');
+          $('tr.row-6 td:eq(5)').removeClass('bKnight');
+        }
+
+        if (piece === 'p') {
+          $('tr.row-2 td:eq(2)').addClass('wPawn');
+          $('tr.row-4 td:eq(2)').removeClass('wPawn');
+        }
+
+        if (piece === 'P') {
+          $('tr.row-7 td:eq(4)').addClass('bPawn');
+          $('tr.row-6 td:eq(4)').removeClass('bPawn');
+        }
+
+        if (piece === 'p') {
+          $('tr.row-2 td:eq(6)').addClass('wPawn');
+          $('tr.row-3 td:eq(6)').removeClass('wPawn');
+        }
+
+        if (piece === 'P') {
+          $('tr.row-7 td:eq(3)').addClass('bPawn');
+          $('tr.row-5 td:eq(3)').removeClass('bPawn');
+        }
+
+        if (piece === 'b') {
+          $('tr.row-1 td:eq(5)').addClass('wBishop');
+          $('tr.row-2 td:eq(6)').removeClass('wBishop');
+        }
+
+        if (piece === 'B') {
+          $('tr.row-8 td:eq(5)').addClass('bBishop');
+          $('tr.row-7 td:eq(4)').removeClass('bBishop');
+        }
+
+        if (piece === 'n') {
+          $('tr.row-1 td:eq(6)').addClass('wKnight');
+          $('tr.row-3 td:eq(5)').removeClass('wKnight');
+        }
+    });
+  });
+});
 // Am I supposed to recognize this?
 })(window || module && module.exports || this);
