@@ -26,6 +26,8 @@ var clickCounter = 0;
     game.next(); // Tell the Model -- `game` -- to advance to the next move...
 
     clickCounter += 1;
+    console.log(clickCounter);
+
 
     jQuery(gameboard).each(function(rank, row){
       jQuery(row).each(function(file, piece){
@@ -73,6 +75,10 @@ var clickCounter = 0;
           $('tr.row-1 td:eq(6)').removeClass('wKnight');
           $('tr.row-3 td:eq(5)').addClass('wKnight');
         }
+
+        if (clickCounter >= 9) {
+          clickCounter = 9;
+        }
     });
   });
 });
@@ -80,8 +86,65 @@ var clickCounter = 0;
   // Controller for "previous move"...
   jQuery('.fa-step-backward').on('click', function(event){
     console.log('previous move');
-    game.prev(); // TODO: Tell the Model -- `game` -- to advance to the previous move...
-    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+    game.prev();
+
+      clickCounter -= 1;
+      console.log(clickCounter);
+
+
+      jQuery(gameboard).each(function(rank, row){
+        jQuery(row).each(function(file, piece){
+
+          if (clickCounter === 0) {
+            $('tr.row-2 td:eq(3)').addClass('wPawn');
+            $('tr.row-4 td:eq(3)').removeClass('wPawn');
+          }
+
+          if (clickCounter === 1) {
+            $('tr.row-8 td:eq(6)').addClass('bKnight');
+            $('tr.row-6 td:eq(5)').removeClass('bKnight');
+          }
+
+          if (clickCounter === 2) {
+            $('tr.row-2 td:eq(2)').addClass('wPawn');
+            $('tr.row-4 td:eq(2)').removeClass('wPawn');
+          }
+
+          if (clickCounter === 3) {
+            $('tr.row-7 td:eq(4)').addClass('bPawn');
+            $('tr.row-6 td:eq(4)').removeClass('bPawn');
+          }
+
+          if (clickCounter === 4) {
+            $('tr.row-2 td:eq(6)').addClass('wPawn');
+            $('tr.row-3 td:eq(6)').removeClass('wPawn');
+          }
+
+          if (clickCounter === 5) {
+            $('tr.row-7 td:eq(3)').addClass('bPawn');
+            $('tr.row-5 td:eq(3)').removeClass('bPawn');
+          }
+
+          if (clickCounter === 6) {
+            $('tr.row-1 td:eq(5)').addClass('wBishop');
+            $('tr.row-2 td:eq(6)').removeClass('wBishop');
+          }
+
+          if (clickCounter === 7) {
+            $('tr.row-8 td:eq(5)').addClass('bBishop');
+            $('tr.row-7 td:eq(4)').removeClass('bBishop');
+          }
+
+          if (clickCounter === 8) {
+            $('tr.row-1 td:eq(6)').addClass('wKnight');
+            $('tr.row-3 td:eq(5)').removeClass('wKnight');
+          }
+
+          if (clickCounter <= 0) {
+            clickCounter = 9;
+          }
+      });
+    });
   });
 
   // Controller for "fast-forward"...
