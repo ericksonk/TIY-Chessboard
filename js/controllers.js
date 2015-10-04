@@ -28,10 +28,14 @@ var gameboard = game.board();
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
     jQuery(gameboard).each(function(rank, row){
       jQuery(row).each(function(file, piece){
+        var $square = $chessboard
+          .find('tr').eq(rank) // Get the `tr` inside the `chessboard` for the `rank`
+          .find('td').eq(file); // Get the `td` inside the `tr` for the `file`
         if (piece === 'p') {
-          $.find('tr').eq(6).find('td').eq(3).removeClass('wPawn');
-          $.find('tr').eq(4).find('td').eq(3).addClass('wPawn');
+          $square.get("main.js", {from: {rank: "6", file: "3"}}).removeClass('td.wPawn');
+          $square.get("main.js", {to: {rank: "4", file: "3"}}).addClass('td.wPawn');
         }
+    });
   });
 
   // Controller for "previous move"...
