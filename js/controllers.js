@@ -18,7 +18,6 @@
   }
 
 var $chessboard = jQuery('.chessboard tbody');
-
 var gameboard = game.board();
 
   // Controller for "next move"...
@@ -28,19 +27,16 @@ var gameboard = game.board();
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
     jQuery(gameboard).each(function(rank, row){
       jQuery(row).each(function(file, piece){
-        var $square = $chessboard
-          .find('tr').eq(rank) // Get the `tr` inside the `chessboard` for the `rank`
-          .find('td').eq(file); // Get the `td` inside the `tr` for the `file`
 
-        // if (piece === 'p') {
-        //   $('tr.row-2 td:eq(3)').removeClass('wPawn');
-        //   $('tr.row-4 td:eq(3)').addClass('wPawn');
-        // }
-        //
-        // if (piece === 'N') {
-        //   $('tr.row-8 td:eq(6)').removeClass('bKnight');
-        //   $('tr.row-6 td:eq(5)').addClass('bKnight');
-        // }
+        if (piece === 'p') {
+          $('tr.row-2 td:eq(3)').removeClass('wPawn');
+          $('tr.row-4 td:eq(3)').addClass('wPawn');
+        }
+
+        if (piece === 'N') {
+          $('tr.row-8 td:eq(6)').removeClass('bKnight');
+          $('tr.row-6 td:eq(5)').addClass('bKnight');
+        }
         //
         // if (piece === 'p') {
         //   $('tr.row-2 td:eq(2)').removeClass('wPawn');

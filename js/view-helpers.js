@@ -24,6 +24,7 @@
         // TODO: Convert `square` to class name(s)
         // TODO: Add class name(s) to `td` instead
 
+
       if (piece === "R"){
         $square.addClass('bRook');
       }
