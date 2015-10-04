@@ -31,9 +31,9 @@ var gameboard = game.board();
         var $square = $chessboard
           .find('tr').eq(rank) // Get the `tr` inside the `chessboard` for the `rank`
           .find('td').eq(file); // Get the `td` inside the `tr` for the `file`
-        if (piece === 'p') {
-          $square.get("main.js", {from: {rank: "6", file: "3"}}).removeClass('td.wPawn');
-          $square.get("main.js", {to: {rank: "4", file: "3"}}).addClass('td.wPawn');
+        if ($square === ('tr:eq(6)'), ('td:eq(3)')) {
+          $('td').removeClass('wPawn');
+          $(('tr:eq(6)'), ('td:eq(3)')).addClass('wPawn');
         }
     });
   });
