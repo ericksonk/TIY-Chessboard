@@ -19,59 +19,60 @@
 
 var $chessboard = jQuery('.chessboard tbody');
 var gameboard = game.board();
-
+var clickCounter = 0;
   // Controller for "next move"...
   jQuery('.fa-step-forward').on('click', function(event){
     console.log('next move');
     game.next(); // Tell the Model -- `game` -- to advance to the next move...
-    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+
+    clickCounter += 1;
+
     jQuery(gameboard).each(function(rank, row){
       jQuery(row).each(function(file, piece){
-
-        if (piece === 'p') {
+        if (clickCounter === 1) {
           $('tr.row-2 td:eq(3)').removeClass('wPawn');
           $('tr.row-4 td:eq(3)').addClass('wPawn');
         }
 
-        if (piece === 'N') {
+        if (clickCounter === 2) {
           $('tr.row-8 td:eq(6)').removeClass('bKnight');
           $('tr.row-6 td:eq(5)').addClass('bKnight');
         }
-        //
-        // if (piece === 'p') {
-        //   $('tr.row-2 td:eq(2)').removeClass('wPawn');
-        //   $('tr.row-4 td:eq(2)').addClass('wPawn');
-        // }
-        //
-        // if (piece === 'P') {
-        //   $('tr.row-7 td:eq(4)').removeClass('bPawn');
-        //   $('tr.row-6 td:eq(4)').addClass('bPawn');
-        // }
-        //
-        // if (piece === 'p') {
-        //   $('tr.row-2 td:eq(6)').removeClass('wPawn');
-        //   $('tr.row-3 td:eq(6)').addClass('wPawn');
-        // }
-        //
-        // if (piece === 'P') {
-        //   $('tr.row-7 td:eq(3)').removeClass('bPawn');
-        //   $('tr.row-5 td:eq(3)').addClass('bPawn');
-        // }
-        //
-        // if (piece === 'b') {
-        //   $('tr.row-1 td:eq(5)').removeClass('wBishop');
-        //   $('tr.row-2 td:eq(6)').addClass('wBishop');
-        // }
-        //
-        // if (piece === 'B') {
-        //   $('tr.row-8 td:eq(5)').removeClass('bBishop');
-        //   $('tr.row-7 td:eq(4)').addClass('bBishop');
-        // }
-        //
-        // if (piece === 'n') {
-        //   $('tr.row-1 td:eq(6)').removeClass('wKnight');
-        //   $('tr.row-3 td:eq(5)').addClass('wKnight');
-        // }
+
+        if (clickCounter === 3) {
+          $('tr.row-2 td:eq(2)').removeClass('wPawn');
+          $('tr.row-4 td:eq(2)').addClass('wPawn');
+        }
+
+        if (clickCounter === 4) {
+          $('tr.row-7 td:eq(4)').removeClass('bPawn');
+          $('tr.row-6 td:eq(4)').addClass('bPawn');
+        }
+
+        if (clickCounter === 5) {
+          $('tr.row-2 td:eq(6)').removeClass('wPawn');
+          $('tr.row-3 td:eq(6)').addClass('wPawn');
+        }
+
+        if (clickCounter === 6) {
+          $('tr.row-7 td:eq(3)').removeClass('bPawn');
+          $('tr.row-5 td:eq(3)').addClass('bPawn');
+        }
+
+        if (clickCounter === 7) {
+          $('tr.row-1 td:eq(5)').removeClass('wBishop');
+          $('tr.row-2 td:eq(6)').addClass('wBishop');
+        }
+
+        if (clickCounter === 8) {
+          $('tr.row-8 td:eq(5)').removeClass('bBishop');
+          $('tr.row-7 td:eq(4)').addClass('bBishop');
+        }
+
+        if (clickCounter === 9) {
+          $('tr.row-1 td:eq(6)').removeClass('wKnight');
+          $('tr.row-3 td:eq(5)').addClass('wKnight');
+        }
     });
   });
 });
