@@ -100,8 +100,9 @@
 
         game.applyMove(xfrom, xto);
 
-      } else {
-          return false;
+      }
+      if (current > moves.length){
+          current = 9;
       }
       return this;
 

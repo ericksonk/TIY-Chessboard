@@ -26,7 +26,7 @@
 
 
       if (piece === "R"){
-        $square.addClass('bRook');
+        $square.addClass('bRook'); // adds class 'bRook' to each "R"
       }
 
       if (piece === "N") {
