@@ -28,8 +28,8 @@ var clickCounter = 0;
 
     clickCounter += 1; // increase var clickCounter by 1 for each loop/each click
 
-    jQuery(gameboard).each(function(rank, row){ // loop through each row in game.board();
-      jQuery(row).each(function(file, piece){ // loop through each column/piece in each row
+    // jQuery(gameboard).each(function(rank, row){ // loop through each row in game.board();
+    //   jQuery(row).each(function(file, piece){ // loop through each column/piece in each row
 
         if (clickCounter === 1) { // 1st time you click the `next` button...
           $('tr.row-2 td:eq(3)').removeClass('wPawn'); // select table row 2, index 3 & remove class
@@ -79,8 +79,8 @@ var clickCounter = 0;
         if (clickCounter >= 9) {
           clickCounter = 9;
         }
-    });
-  });
+  //   });
+  // });
 });
 
   // Controller for "previous move"...
@@ -92,8 +92,8 @@ var clickCounter = 0;
       // console.log(clickCounter);
 
 
-      jQuery(gameboard).each(function(rank, row){ // loop through each row in game.board();
-        jQuery(row).each(function(file, piece){ // loop through each column and piece in each row
+      // jQuery(gameboard).each(function(rank, row){ // loop through each row in game.board();
+      //   jQuery(row).each(function(file, piece){ // loop through each column and piece in each row
 
           if (clickCounter === 0) {
             $('tr.row-2 td:eq(3)').addClass('wPawn');
@@ -143,8 +143,8 @@ var clickCounter = 0;
           if (clickCounter < 0) {
             clickCounter = 9;
           }
-      });
-    });
+    //   });
+    // });
   });
 
   // Controller for "fast-forward"...

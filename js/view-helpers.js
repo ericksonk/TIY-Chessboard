@@ -10,6 +10,7 @@
   var gameboard = game.board();
 
   // You could also use nested `for` loops, but this is better...
+    // for (var rank = 0; rank < gameboard.length; rank++) {}
   jQuery(gameboard).each(function(rank, row){
     jQuery(row).each(function(file, piece){
       // http://stackoverflow.com/questions/1442925/how-to-get-nth-jquery-element

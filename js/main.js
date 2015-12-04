@@ -137,7 +137,7 @@
         var xto = moves[current].to;
         game.applyMove(xfrom, xto);
       }
-      console.log(game.tracer(game.end));
+      console.log(game.tracer());
       return this;
     },
     /**
