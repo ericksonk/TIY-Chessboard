@@ -11,6 +11,7 @@
   },
   "scripts": {
     "test": "browser-sync start --server --startPath tests.html --files='js/*.js'",
+    "sass": "node-sass scss/main.scss css/main.css",
     "start": "browser-sync start --server --directory --files='index.html'"
   },
   "repository": {
