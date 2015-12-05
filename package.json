@@ -11,7 +11,8 @@
   },
   "scripts": {
     "test": "browser-sync start --server --startPath tests.html --files='js/*.js'",
-    "start": "browser-sync start --server --directory --files='test.html'"
+    "start": "browser-sync start --server --directory --files='test.html'",
+    "sass": "node-sass scss/main.scss css/main.css"
   },
   "repository": {
     "type": "git",
